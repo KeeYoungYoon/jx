@@ -645,7 +645,7 @@ func (o *StepVerifyPreInstallOptions) gatherRequirements(requirements *config.Re
 	requirements.Cluster.ProjectID = strings.TrimSpace(requirements.Cluster.ProjectID)
 	requirements.Cluster.Zone = strings.TrimSpace(strings.ToLower(requirements.Cluster.Zone))
 	requirements.Cluster.Region = strings.TrimSpace(strings.ToLower(requirements.Cluster.Region))
-	requirements.Cluster.ClusterName = strings.TrimSpace(strings.ToLower(requirements.Cluster.ClusterName))
+	requirements.Cluster.ClusterName = strings.TrimSpace(requirements.Cluster.ClusterName)
 
 	err = o.gatherGitRequirements(requirements)
 	if err != nil {
